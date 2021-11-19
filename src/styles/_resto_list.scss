@@ -1,0 +1,88 @@
+resto-list {
+  padding-top: 40px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.resto__item {
+  border: $resto__item__border;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 #00000033;
+    overflow: hidden;
+  }
+}
+
+.resto__thumbnail {
+  position: relative;
+  padding-bottom: 56.2%;
+  background: $resto__thumbnail__background;
+  z-index: 1;
+
+  img,
+  .skeleton__body {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    z-index: -1;
+  }
+}
+
+.resto__content {
+  padding: 24px;
+  z-index: 2;
+}
+
+.resto__name {
+  font-size: $resto__name__font-size;
+  font-weight: 600;
+  color: $primary-color;
+  padding: 8px 0 16px;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+.resto__city,
+.resto__rating {
+  position: absolute;
+  bottom: 16px;
+  color: white;
+  padding: 4px 8px;
+}
+
+.resto__city {
+  left: 16px;
+  border-radius: .5rem;
+  background: rgba($color: #000000, $alpha: .65);
+}
+
+.resto__rating {
+  right: 16px;
+  border-radius: .5rem;
+  background: rgba($color: #000000, $alpha: .65);
+}
+
+.resto__description {
+  line-height: 1.7;
+  color: $dark-color;
+  font-size: $resto__desc__font-size;
+  overflow: hidden;
+  text-overflow: clip;
+  display: -webkit-box;
+  -webkit-line-clamp: $resto__desc__max-lines;
+  -webkit-box-orient: vertical;
+}

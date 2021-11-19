@@ -1,0 +1,111 @@
+@media screen and (max-width: ($tablet - 0.1px)) {
+  body.hideoverflow {
+    overflow: hidden !important;
+  }
+
+  .menu__open .menu {
+    height: 100%;
+  }
+
+  app-bar.menu__open {
+    background-color: $dark-color;
+  }
+
+  .menu__item {
+    border-bottom: $menu__border;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    max-width: 720px;
+  }
+
+  /* --- Menu --- */
+  .menu {
+    position: static;
+    display: block;
+    height: auto;
+    background-color: transparent;
+  }
+
+  #menu-btn {
+    display: none;
+  }
+
+  .menu__list {
+    padding: 0;
+  }
+
+  .menu__item {
+    display: inline-block;
+
+    a {
+      padding: 16px;
+    }
+  }
+
+  /* --- Hero Element --- */
+  .hero__heading {
+    font-size: $hero__heading__font-size;
+  }
+
+  .hero__subheading {
+    font-size: $hero__subheading__font-size;
+    margin: 0.5em 0 2em;
+  }
+
+  .hero__tagline {
+    font-size: $hero__tagline__font-size;
+  }
+
+  /* --- Resto list --- */
+  resto-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .resto__name {
+    font-size: 1.25em;
+  }
+
+  .resto__description {
+    font-size: 0.95em;
+  }
+
+  /* --- Resto detail --- */
+  resto-details p {
+    font-size: 0.95em;
+  }
+
+  .info {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .main-info {
+    order: 2;
+  }
+
+  .menus {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    max-width: 1100px;
+  }
+
+  /* --- Resto list --- */
+  resto-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* --- Resto detail --- */
+  .desc__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .thumbnail {
+    order: 1;
+  }
+}

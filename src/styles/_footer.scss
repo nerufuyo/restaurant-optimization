@@ -1,0 +1,25 @@
+footer {
+  height: $footer__height;
+  background-color: $dark-color;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  color: white;
+  margin-top: 56px;
+  gap: 16px;
+  font-size: 0.9em;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    margin-right: 8px;
+  }
+
+  p {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,64 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $app_bar__height;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* --- Body --- */
+
+body {
+  font-family: $main__font;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  min-height: calc(100vh + #{$hero__height - $footer__height});
+}
+
+/* --- Custom element --- */
+favorite-page,
+detail-page {
+  display: block;
+  padding-top: ($app_bar__height + 32px) !important;
+}
+
+
+/* --- Etc --- */
+// Skip link
+.skip-link {
+  position: absolute;
+  top: -50px;
+  left: 16px;
+  background-color: $accent-color;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+
+  &:focus {
+    top: $app_bar__height + 4px;
+  }
+}
+
+// Container
+.container {
+  padding: 0 16px;
+  margin: auto;
+  max-width: 500px;
+}
+
+// Message
+.message {
+  margin: 40px 16px 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.message__heading {
+  font-size: 1.4em;
+}
